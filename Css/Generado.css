@@ -277,7 +277,7 @@ textarea::-webkit-scrollbar-thumb {
 
 /*----- visual result -----*/
 #dvi{
-  background-color: black;
+  background-color: white;
   width:50%;
   height: 99%;
   box-sizing: border-box;
