@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+/* Div top */
+.dtop
+{
+  position: absolute;
+  display: flex;
+  height: 6%;
+  width: 100%;
+  background-color: white;
+}
+
+
+/* Menu */
+.dm {
+  position: fixed;
+  top: 0px;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  padding: 0px;
+  transition: right 0.3s ease;
+  border-left: 3px solid blue;
+  box-sizing: border-box;
+  z-index: 1;
+  
+}
+
+.dm ul {
+ position: relative;
+ list-style: none;
+ padding: 0;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ display: block;
+ background-color: black;
+}
+
+.dm ul li {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  margin-bottom: 0px;
+  background-color: black;
+  top: -16px;
+  overflow: hidden;
+
+}
+
+.dm ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.dm ul li:first-child {
+ position: relative;
+ background-color: white; 
+ border-bottom: 10px;
+ border-color: blue;
+ box-shadow: 10px blue;
+ height: 9%;
+}
+
+.dm ul li:first-child a {
+ background-color: black; 
+ border-bottom: 10px;
+ border-color: blue;
+ border-radius: 0px;
+ height: 99%;
+}
+
+.dm ul li:first-child a:hover {
+ background-color: black; 
+ border-bottom: 10px;
+ border-color: blue;
+ border-radius: 0px;
+ height: 99%;
+}
+
+.dm ul li a:hover{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0 20px 20px 0px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+#lblm {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+  transition: right 0.3s ease; 
+}
+
+#btnm {
+  display: none;
+}
+
+#btnm:checked + #lblm + .dm {
+  right: 0;
+}
+
+#btnm:checked + #lblm {
+  right: 300px; 
+}
+
+
+/* Wide div */
+.da {
+  position: absolute;
+  display: flex;
+  top: 7%;
+  width: 100%;
+  flex-direction:row;
+  height: 83%;
+  background-color: white;
+  justify-content: center;
+}
+
+
+/*----- right content -----*/
+#dre{
+  background-color: rgb(59, 51, 51);
+  width:50%;
+  height: 99%;
+  box-sizing: border-box;
+  border: 3px solid blue;
+  border-radius: 10px;
+  margin-left: 0.5%;
+  transition: transform 10s ease; 
+  transform-origin: left right 10s;
+}
+
+
+/*----- tabs -----*/
+.tabs {
+	width:100%;
+	display:inline-block;
+margin: 0%;
+height: 97.5%;
+background-color: transparent;
+border-radius: 10px;
+background-color: black;
+}
+
+.tab-links:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+
+.tab-links li {
+	margin:0px 5px;
+	float:left;
+	list-style:none;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.tab-links a {
+  
+	padding:9px 15px;
+	display:inline-block;
+	border-radius:3px 3px 0px 0px;
+	background-color:black;
+	font-size:16px;
+	font-weight:600;
+	color:#4c4c4c;
+	transition:all linear 0.15s;
+  text-decoration:none;
+}
+
+.tab-links a:hover {
+  
+	background-color:red;
+	text-decoration:none;
+}
+
+li.active a, li.active a:hover {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+	background-color:white;
+	color:black;
+}
+
+
+/*----- Content of Tabs -----*/
+.tab-content {
+	padding:0px;
+	border-radius:10px;
+  position:relative;      
+  box-shadow:0 0px 4px white, 0 0 20px black inset;
+  box-sizing: border-box;
+	background-color:black;
+  height: 96%;
+  width: 100%; 
+}
+
+.tab {
+	display:none;
+}
+
+.tab.active {
+	display:flex;
+}
+
+
+/*----- Textarea code -----*/
+.txtc{
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  padding: 10px;
+  background-color: black;
+  color: white;
+  resize: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.txtc::-webkit-scrollbar {
+  background-color: black;
+  border-radius: 20px;
+  width: 8px;
+  height: 20px;
+  margin: 20px;
+  cursor:default;
+}
+
+.txtc::-webkit-scrollbar-track{
+  background-color: transparent;
+  border-radius: 20px;
+  margin: 20px;
+  cursor:default;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 20px;
+  margin: 20px;
+  cursor:default;
+}
+
+
+/*----- visual result -----*/
+#dvi{
+  background-color: black;
+  width:50%;
+  height: 99%;
+  box-sizing: border-box;
+  border: 3px solid blue;
+  border-radius: 10px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  transition: left 3;
+}
+
+
+/*----- Button div -----*/
+.db
+{
+  position: absolute;
+  top: 90%;
+  margin-left: 0.5%;
+  width: 99%;
+  height: 9%;
+  border-radius: 20px;
+  background-color: black;
+  box-sizing: border-box;
+  border: 3px solid blue;
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+}
+
+.dc{  
+  width: 33.3%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.btncenter {
+  width: 10%;
+  height: 80%;
+  margin-left: 0.5%;
+  background-color: white;
+  border: solid;
+  border-radius: 10px;
+  color:rgb(45, 40, 40);
+  justify-self: center;
+  justify-items: center;
+}
+
+.btncenter:hover{
+  width: 11%;
+  height: 83%;
+  margin-left: 1%;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  color:blue;
+}
+
+.dl{
+  width: 33.3%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+ }
+
+.btnl{
+  width: 10%;
+  height: 80%;
+  margin-left: 1%;
+  background-color: white;
+  border: solid;
+  border-radius: 10px;
+  color:rgb(45, 40, 40);
+  align-content: center;
+}
+
+.btnl:hover{
+  width: 11%;
+  height: 83%;
+  margin-left: 1%;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  color:blue;
+}
+
+
+

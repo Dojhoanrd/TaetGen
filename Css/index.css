@@ -1,0 +1,187 @@
+
+#spc {
+  display: block;
+}
+
+/* Estilos para el div para pantallas pequeñas */
+#sm {
+  display: none;
+}
+/* screen size */
+@media screen and (max-width: 600px) {
+  #spc {
+  display: none;
+  }
+  #sm
+  {
+    display: block
+  }
+}
+
+
+/* Teaxtarea and button */
+.dcen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  width: 50%;
+}
+
+.dcen2{
+  text-align: center;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.dcen2 textarea {
+  background-color: black;
+  color: white;
+  border: 3px solid blue;
+  display: block;
+  width: calc(100% - 20px); 
+  height: 50px;
+  padding: 15px 15px 15px 30px;
+  margin: 0 auto;
+  overflow: hidden; 
+  resize: none; 
+  box-sizing: border-box;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.dcen2 textarea::before
+{
+  padding: 15px 15px 15px 300px;
+}
+
+.dcen2 button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: 3px solid blue;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btng:hover{
+  background-color: blue;
+}
+
+
+
+/* menu */
+.dm {
+  position: fixed;
+  top: 0px;
+  right: -300px; 
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  padding: 0px;
+  transition: right 0.3s ease;
+  border-left: 3px solid blue;
+  box-sizing: border-box;
+}
+
+.dm ul {
+ position: relative;
+ list-style: none;
+ padding: 0;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ display: block;
+ background-color: black;
+}
+
+.dm ul li {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  margin-bottom: 0px;
+  background-color: black;
+  top: -16px;
+  overflow: hidden;
+}
+
+.dm ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.dm ul li:first-child {
+ position: relative;
+ background-color: white; 
+ border-bottom: 10px;
+ border-color: blue;
+ box-shadow: 10px blue;
+ height: 9%;
+}
+.dm ul li:first-child a {
+ background-color: black;
+ border-bottom: 10px;
+ border-color: blue;
+ border-radius: 0px;
+ height: 99%;
+}
+
+.dm ul li:first-child a:hover {
+ background-color: black; 
+ border-bottom: 10px;
+ border-color: blue;
+ border-radius: 0px;
+ height: 99%;
+}
+
+.dm ul li a:hover{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0 20px 20px 0px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+#lblm {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+  transition: right 0.3s ease; 
+}
+
+#btnm {
+  display: none;
+}
+
+#btnm:checked + #lblm + .dm {
+  right: 0;
+}
+
+#btnm:checked + #lblm {
+  right: 300px;
+}
