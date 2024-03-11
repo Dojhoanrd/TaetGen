@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+    <title>TaetGen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/index.css">
+    <script src="https://kit.fontawesome.com/4848cae046.js" crossorigin="anonymous"></script>
+    <script src="Js/index.js"></script>
+  </head>
+  
+  <body>
+<div id="spc">
+    <!-- Textarea and Button -->
+    <div class="dcen">
+      <div class="dcen2">
+        <textarea  id="txtp" rows="1" placeholder="Escribe aquí" oninput="auto_grow(this)"></textarea>
+        <button  id="btng" class="btng">Generar</button>
+      </div>
+    </div>
+  
+    
+    <div id="code" style="visibility: hidden;" class="h"></div>
+
+
+   <!-- Menu -->
+   <input type="checkbox" id="btnm">
+   <label for="btnm" id="lblm">☰</label>
+   <div id="dm" class="dm">
+    <ul>
+      <li><a href="Html/Usuario.html"><i class="fa-solid fa-user" style="color: #ffffff;"></i>&nbsp;Usuario</a></li>
+      <li><a href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i>&nbsp;Inicio</a></li>
+      <li><a href="Html/Galeria.html"><i class="fa-solid fa-square" style="color: #ffffff;"></i>&nbsp;Galeria</a></li>
+      <li><a href="Html/Colaboradores.html"><i class="fa-solid fa-user-group" style="color: #ffffff;"></i>&nbsp;Colaboradores</a></li>
+      <li><a href="Html/Contacto.html"><i class="fa-solid fa-phone" style="color: #ffffff;"></i>&nbsp;Contactos</a></li>
+    </ul>
+  </div>
+  
+   <!-- Script ai -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <script  type="module" src="Js/llm.js"> </script>
+
+
+</div>
+
+<!-- Screen size -->
+<div id="sm">
+  <div style="background-color: black;  position: relative;top: 40%;"><center><p style="color: white;">  "¡Oops! Lo sentimos, esta página no está disponible en dispositivos móviles en este momento."</p></center></div>
+</div>
+
+
+</body>
+</html>
